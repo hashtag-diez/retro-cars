@@ -1,0 +1,319 @@
+:root{
+--main-bg-color: #6022EF;
+  --secondary-bg-color: #DFF53A;
+  --button-bg-color: #F88CD7;
+  --shadow-color: #082536;
+  --header2-color: #23241C;
+}
+@font-face {
+  font-family: "Abhaya Libre";
+  src: url("/assets/fonts/AbhayaLibre-Medium.ttf") format("truetype"),
+  url("/assets/fonts/AbhayaLibre-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "THE FRANKY DUNKEY PERSONAL USE";
+  src: url("/assets/fonts/The\ Franky\ Dunkey\ Personal\ Use.otf") format("opentype");
+}
+
+body{
+  display: flex;
+  flex-flow: column nowrap;
+  overflow: hidden;
+  height: 100vh;
+  margin: 0;
+  background: var(--main-bg-color);
+  font-family: "Abhaya Libre", sans-serif;
+  color: var(--secondary-bg-color);
+}
+nav{
+  display: flex;
+  padding: 20px 120px;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+}
+ul{
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 80px;
+  list-style: none;
+}
+ul li{
+  cursor: pointer;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+section{
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  padding: 50px 120px;
+}
+aside{
+  width: 50%;
+}
+aside:nth-child(2){
+  display: flex;
+  justify-content: flex-end;
+}
+aside > img{
+  position: absolute;
+}
+.left-vector {
+  left: -120px;
+  top: -0.6em;
+}
+.right-vector{
+  position: absolute;
+  right: -120px;
+  top: -5em;
+}
+.hero-wrapper{
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  font-size: 112px;
+}
+.hero-wrapper img{
+  position: absolute;
+}
+.hero-wrapper :nth-child(6){
+  margin-left: 0.75ch;
+}
+.rose-star{
+  width: 0.7em;
+  top: -0.35em;
+  left: 2.9em;
+}
+.dark-star{
+  width: 0.9em;
+  top: 2.7em;
+  left: 3.7em;
+}
+.dark-star2{
+  width: 0.9em;
+  top: 1.5em;
+  left: -0.1em;
+}
+h1{
+  margin: 0;
+  font-size: inherit;
+  font-family: "THE FRANKY DUNKEY PERSONAL USE", sans-serif;
+  text-shadow: #082536 0.06em 0.06em;
+  -webkit-text-stroke: var(--shadow-color) 0.1px;
+}
+
+.button-wrapper{
+  position: relative;
+  font-family: "Abhaya Libre", sans-serif;
+  font-weight: bold;
+  width: 11em;
+  border-radius: 50%;
+  font-size: 18px;
+  padding: 0.55em;
+  box-shadow: #082536 0.3em 0.3em;
+  background: var(--button-bg-color);
+  border: 1px solid var(--shadow-color);
+  transform: rotate(-7.31deg);
+  margin-top: 25px;
+  left: -4em;
+}
+.button-wrapper > button{
+  position: relative;
+  background-color: transparent;
+  border: 0;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 700;
+  padding: 1.7em 2.9em;
+  padding-left: 1.2em;
+  text-align: left;
+  width: 100%;
+  border-radius: 50%;
+  border: 1px solid var(--shadow-color);
+}
+
+.button-wrapper > button::before{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  font-size: 2px;
+  width: 4.5em;
+  padding: 0em 10em;
+  height: 1px;
+  background-color: var(--shadow-color);
+}
+.button-wrapper > button::after{
+  content: "";
+  position: absolute;
+  top: 44%;
+  left: 79%;
+  padding: 5px 5px;
+  transform: rotate(45deg);
+  font-size: 5px;
+  border-top: 1px solid var(--shadow-color);
+  border-right: 1px solid var(--shadow-color);
+}
+
+footer{
+  width: 100vw;
+  display: flex;
+  overflow: hidden;
+  background-color: var(--secondary-bg-color);
+}
+
+.footer-wrapper{
+  flex-grow: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 18px 0px;
+  gap: 25px;
+  animation: carroussel 100s linear infinite;
+}
+@keyframes carroussel{
+  0%{
+    transform: translateX(0%);
+  }
+  100%{
+    transform: translateX(-50%);
+  }
+}
+.footer-content{
+  max-height: 22px;
+  display: flex;
+  flex-flow: row nowrap;
+  font-weight: 500;
+  gap: 25px;
+  color: var(--shadow-color);
+  font-size: 24px;
+}
+.footer-content p{
+  margin: 0;
+  white-space: nowrap;
+}
+.crosses{
+  position: absolute;
+  top: -50px;
+  left: -58px;
+}
+.horizontal-crosses{
+  position: absolute;
+  display: flex;
+  gap: 30px;
+  flex-flow: row nowrap;
+}
+.vertical-crosses{
+  position: absolute;
+  display: flex;
+  gap: 30px;
+  flex-flow: column nowrap;
+}
+.rose-star-wrapper{
+  position: absolute;
+  z-index: 100;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 7px;
+  justify-content: center;
+  align-items: center;
+  width: 283px;
+  height: 283px;
+  bottom: -100px;
+  right: -80px;
+  background-image: url("/assets/huge\ rose\ star.svg");
+}
+h3{
+  color: var(--shadow-color);
+  font-size: 18px;
+  font-family: "THE FRANKY DUNKEY PERSONAL USE", sans-serif;
+  margin: 0;
+}
+.rose-star-wrapper :nth-child(2n){
+  -webkit-text-stroke: var(--shadow-color) 1px;
+  color: var(--button-bg-color);
+}
+.window{
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  aspect-ratio: 470/551;
+  box-shadow: var(--shadow-color) 1em 0.6em;
+  border: 2px solid var(--shadow-color);
+  background-color: var(--button-bg-color);
+  height: 52vh;
+}
+.toolbar{
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding-left: 30px;
+  gap: 12px;
+  width: calc(100% - 30px);
+  height: 42px;
+  background-color: var(--secondary-bg-color);
+  border-bottom: 2px solid var(--shadow-color);
+}
+.dot{
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--shadow-color);
+  border-radius: 18px;
+  background-color: var(--main-bg-color);
+}
+.main-content{
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  flex-grow: 1;
+  overflow: hidden;
+  
+}
+.main-content::before{
+  content: "";
+  z-index: 0;
+  position: absolute;
+  height: 130%;
+  background-color: var(--secondary-bg-color);
+  width: 500%;
+  border-radius: 40%;
+  top: 45%;
+  left: -20%;
+}
+.main-content aside{
+  position: relative;
+  height: 100%;
+  width: 24px;
+  z-index: 1;
+  background-color: #ECDEC3;
+  border-left: 2px solid var(--shadow-color);
+}
+.main-content aside::before{
+  position: absolute;
+  bottom: 0px;
+  content: "";
+  height: 62%;
+  width: 100%;
+  background-color: var(--button-bg-color);
+  border-top: 2px solid var(--shadow-color);
+}
+.car-motifs{
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 7px;
+}
+.car{
+  top: 20%;
+  left: -2%;
+  width: 100%;
+  position: absolute;
+}
+.sub-hero{
+  position: absolute;
+  top: 5%;
+  left: 0;
+}
